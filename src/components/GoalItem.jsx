@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { FaTimesCircle } from 'react-icons/fa';
@@ -20,6 +21,12 @@ const GoalItem = ({ _id: id, text, createdAt }) => {
       </button>
     </div>
   );
+};
+
+GoalItem.propTypes = {
+  _id: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
 };
 
 export default GoalItem;
