@@ -9,7 +9,8 @@ const GoalItem = ({ _id: id, text, createdAt }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    dispatch(removeGoal({ id, toast }));
+    if (window.confirm('Are you sure you want to delete this goal?'))
+      dispatch(removeGoal({ id, toast }));
   };
 
   return (
