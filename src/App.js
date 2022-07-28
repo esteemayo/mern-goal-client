@@ -1,5 +1,8 @@
-import { Dashboard, Login, Register, SharedLayout } from 'pages';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import AuthRoute from 'utils/AuthRoute';
+import ProtectedRoute from 'utils/ProtectedRoute';
+import { Dashboard, Login, Register, SharedLayout } from 'pages';
 
 function App() {
   return (
@@ -8,9 +11,30 @@ function App() {
         <div className='container'>
           <Routes>
             <Route path='/' element={<SharedLayout />}>
-              <Route index element={<Dashboard />} />
-              <Route path='login' element={<Login />} />
-              <Route path='register' element={<Register />} />
+              <Route
+                index
+                element={
+                  <AuthRoute>
+                    <Dashboard />
+                  </AuthRoute>
+                }
+              />
+              <Route
+                path='login'
+                element={
+                  <ProtectedRoute>
+                    <Login />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='register'
+                element={
+                  <ProtectedRoute>
+                    <Register />
+                  </ProtectedRoute>
+                }
+              />
             </Route>
           </Routes>
         </div>
