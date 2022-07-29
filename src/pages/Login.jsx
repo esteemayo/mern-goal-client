@@ -5,8 +5,8 @@ import { FaSignInAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Input from 'components/Input';
 import Spinner from 'components/Spinner';
+import FormInput from 'components/FormInput';
 import FormButton from 'components/FormButton';
 import { loginUser, reset } from 'features/auth/authSlice';
 
@@ -58,7 +58,7 @@ const Login = ({ loginInputs }) => {
           {loginInputs.map((input) => {
             const { id, type, name, placeholder } = input;
             return (
-              <Input
+              <FormInput
                 id={id}
                 key={id}
                 type={type}

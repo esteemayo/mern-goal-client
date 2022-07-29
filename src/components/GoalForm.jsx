@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
-import Input from './Input';
+import FormInput from './FormInput';
 import FormButton from './FormButton';
 import { createNewGoal } from 'features/goals/goalSlice';
 
@@ -19,7 +19,7 @@ const GoalForm = () => {
   return (
     <section className='form'>
       <form onSubmit={handleSubmit}>
-        <Input
+        <FormInput
           id='text'
           name='text'
           type='text'

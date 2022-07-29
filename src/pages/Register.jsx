@@ -12,8 +12,8 @@ import {
 } from 'firebase/storage';
 
 import app from '../firebase';
-import Input from 'components/Input';
 import Spinner from 'components/Spinner';
+import FormInput from 'components/FormInput';
 import FormButton from 'components/FormButton';
 import { registerUser, reset } from 'features/auth/authSlice';
 
@@ -121,7 +121,7 @@ const Register = ({ registerInputs }) => {
           {registerInputs.map((input) => {
             const { id, type, name, placeholder } = input;
             return (
-              <Input
+              <FormInput
                 id={id}
                 key={id}
                 type={type}
