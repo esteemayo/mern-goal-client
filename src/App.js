@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import AuthRoute from 'utils/AuthRoute';
 import ProtectedRoute from 'utils/ProtectedRoute';
+import { loginInputs, registerInputs } from 'formData';
 import { Dashboard, Login, Register, SharedLayout } from 'pages';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
                 path='login'
                 element={
                   <ProtectedRoute>
-                    <Login />
+                    <Login loginInputs={loginInputs} />
                   </ProtectedRoute>
                 }
               />
@@ -31,7 +32,7 @@ function App() {
                 path='register'
                 element={
                   <ProtectedRoute>
-                    <Register />
+                    <Register registerInputs={registerInputs} />
                   </ProtectedRoute>
                 }
               />
