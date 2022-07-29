@@ -1,20 +1,21 @@
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
+import { useEffect, useState } from 'react';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import Input from 'components/Input';
 import Spinner from 'components/Spinner';
 import { loginUser, reset } from 'features/auth/authSlice';
 
-const Login = () => {
+const Login = ({ loginInputs }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isError, isSuccess, isLoading, message } = useSelector(
     (state) => ({ ...state.auth })
   );
 
-  const emailRef = useRef();
   const [formData, setFormData] = useState(null);
 
   const handleChange = ({ target: input }) => {
@@ -33,7 +34,6 @@ const Login = () => {
   };
 
   useEffect(() => {
-    emailRef.current.focus();
     isError && toast.error(message);
     isSuccess && user && navigate('/');
     dispatch(reset());
@@ -54,28 +54,20 @@ const Login = () => {
 
       <section className='form'>
         <form onSubmit={handleSubmit}>
-          <div className='form-group'>
-            <input
-              id='email'
-              type='email'
-              name='email'
-              placeholder='Enter your email'
-              className='form-control'
-              ref={emailRef}
-              onChange={handleChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              id='password'
-              type='password'
-              name='password'
-              placeholder='Enter password'
-              className='form-control'
-              onChange={handleChange}
-              minLength={8}
-            />
-          </div>
+          {loginInputs.map((input) => {
+            const { id, type, name, placeholder } = input;
+            return (
+              <Input
+                key={id}
+                id={id}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                onChange={handleChange}
+                autoFocus={name === 'email' ? true : false}
+              />
+            );
+          })}
           <div className='form-group'>
             <button type='submit' className='btn btn-block'>
               Login
@@ -85,6 +77,17 @@ const Login = () => {
       </section>
     </>
   );
+};
+
+Login.propTypes = {
+  loginInputs: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default Login;
