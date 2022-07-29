@@ -155,6 +155,11 @@ h3 {
   justify-content: center;
 }
 
+.btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
 .btn svg {
   margin-right: 8px;
 }
