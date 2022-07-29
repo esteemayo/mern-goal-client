@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Input from 'components/Input';
 import Spinner from 'components/Spinner';
+import FormButton from 'components/FormButton';
 import { loginUser, reset } from 'features/auth/authSlice';
 
 const Login = ({ loginInputs }) => {
@@ -58,8 +59,8 @@ const Login = ({ loginInputs }) => {
             const { id, type, name, placeholder } = input;
             return (
               <Input
-                key={id}
                 id={id}
+                key={id}
                 type={type}
                 name={name}
                 placeholder={placeholder}
@@ -68,11 +69,7 @@ const Login = ({ loginInputs }) => {
               />
             );
           })}
-          <div className='form-group'>
-            <button type='submit' className='btn btn-block'>
-              Login
-            </button>
-          </div>
+          <FormButton type='submit' text='Login' />
         </form>
       </section>
     </>

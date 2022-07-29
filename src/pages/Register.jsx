@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getStorage,
@@ -11,7 +12,9 @@ import {
 } from 'firebase/storage';
 
 import app from '../firebase';
+import Input from 'components/Input';
 import Spinner from 'components/Spinner';
+import FormButton from 'components/FormButton';
 import { registerUser, reset } from 'features/auth/authSlice';
 
 const initialState = {
@@ -21,19 +24,18 @@ const initialState = {
   confirmPassword: '',
 };
 
-const Register = () => {
+const Register = ({ registerInputs }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => ({ ...state.auth })
   );
 
-  const nameRef = useRef();
   const [per, setPer] = useState(null);
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState(initialState);
 
-  const handleChange = ({ target: input }) => {
+  const handleChange = (input) => {
     const { name, value } = input;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -96,7 +98,6 @@ const Register = () => {
   };
 
   useEffect(() => {
-    nameRef.current.focus();
     isError && toast.error(message);
     isSuccess && user && navigate('/');
     dispatch(reset());
@@ -117,69 +118,44 @@ const Register = () => {
 
       <section className='form'>
         <form onSubmit={handleSubmit}>
-          <div className='form-group'>
-            <input
-              type='file'
-              name='file'
-              id='file'
-              className='form-control'
-              onChange={(e) => setFile(e.target.files[0])}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='text'
-              name='name'
-              id='name'
-              placeholder='Enter your name'
-              className='form-control'
-              ref={nameRef}
-              onChange={handleChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='email'
-              name='email'
-              id='email'
-              placeholder='Enter your email'
-              className='form-control'
-              onChange={handleChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              name='password'
-              id='password'
-              placeholder='Enter password'
-              className='form-control'
-              onChange={handleChange}
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              name='confirmPassword'
-              id='confirmPassword'
-              placeholder='Confirm password'
-              className='form-control'
-              onChange={handleChange}
-            />
-          </div>
-          <div className='form-group'>
-            <button
-              type='submit'
-              className='btn btn-block'
-              disabled={per !== null && per < 100}
-            >
-              Submit
-            </button>
-          </div>
+          {registerInputs.map((input) => {
+            const { id, type, name, placeholder } = input;
+            return (
+              <Input
+                id={id}
+                key={id}
+                type={type}
+                name={name}
+                autoFocus={name === 'name' ? true : false}
+                placeholder={type !== 'file' ? placeholder : null}
+                onChange={({ target }) =>
+                  type === 'file'
+                    ? setFile(target.files[0])
+                    : handleChange(target)
+                }
+              />
+            );
+          })}
+          <FormButton
+            type='submit'
+            text='Submit'
+            disabled={per !== null && per < 100}
+          />
         </form>
       </section>
     </>
   );
+};
+
+Register.propTypes = {
+  registerInputs: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default Register;

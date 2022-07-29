@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
+import Input from './Input';
+import FormButton from './FormButton';
 import { createNewGoal } from 'features/goals/goalSlice';
 
 const GoalForm = () => {
@@ -17,19 +19,14 @@ const GoalForm = () => {
   return (
     <section className='form'>
       <form onSubmit={handleSubmit}>
-        <div className='form-group'>
-          <label htmlFor='text'>Goal</label>
-          <input
-            id='text'
-            type='text'
-            onChange={(e) => setText(e.target.value)}
-          />
-        </div>
-        <div className='form-group'>
-          <button type='submit' className='btn btn-block'>
-            Add Goal
-          </button>
-        </div>
+        <Input
+          id='text'
+          name='text'
+          type='text'
+          label='Goal'
+          onChange={(e) => setText(e.target.value)}
+        />
+        <FormButton type='submit' text='Add Goal' />
       </form>
     </section>
   );
