@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const FormButton = ({ type, text, ...rest }) => {
+const FormButton = ({ text, ...rest }) => {
   return (
     <div className='form-group'>
-      <button {...rest} type={type} className='btn btn-block'>
+      <button {...rest} type='submit' className='btn btn-block'>
         {text}
       </button>
     </div>
@@ -11,7 +11,6 @@ const FormButton = ({ type, text, ...rest }) => {
 };
 
 FormButton.propTypes = {
-  type: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
 

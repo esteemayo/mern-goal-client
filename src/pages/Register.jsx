@@ -136,11 +136,7 @@ const Register = ({ registerInputs }) => {
               />
             );
           })}
-          <FormButton
-            type='submit'
-            text='Submit'
-            disabled={per !== null && per < 100}
-          />
+          <FormButton text='Submit' disabled={per !== null && per < 100} />
         </form>
       </section>
     </>

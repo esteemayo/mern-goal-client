@@ -26,7 +26,7 @@ const GoalForm = () => {
           label='Goal'
           onChange={(e) => setText(e.target.value)}
         />
-        <FormButton type='submit' text='Add Goal' />
+        <FormButton text='Add Goal' />
       </form>
     </section>
   );

@@ -69,7 +69,7 @@ const Login = ({ loginInputs }) => {
               />
             );
           })}
-          <FormButton type='submit' text='Login' />
+          <FormButton text='Login' />
         </form>
       </section>
     </>
