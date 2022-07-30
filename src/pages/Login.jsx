@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 import { FaSignInAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Spinner from 'components/Spinner';
@@ -71,6 +71,9 @@ const Login = ({ loginInputs }) => {
           })}
           <FormButton text='Login' />
         </form>
+        <p>
+          <Link to='/forgot'>Forgot your password?</Link>
+        </p>
       </section>
     </>
   );
