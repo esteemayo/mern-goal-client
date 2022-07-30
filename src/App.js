@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthRoute from 'utils/AuthRoute';
 import ProtectedRoute from 'utils/ProtectedRoute';
 import { loginInputs, registerInputs } from 'formData';
-import { Dashboard, Login, NotFound, Register, SharedLayout } from 'pages';
+import {
+  Dashboard,
+  Forgot,
+  Login,
+  NotFound,
+  Register,
+  SharedLayout,
+} from 'pages';
 
 function App() {
   return (
@@ -33,6 +40,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Register registerInputs={registerInputs} />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='forgot'
+                element={
+                  <ProtectedRoute>
+                    <Forgot />
                   </ProtectedRoute>
                 }
               />
