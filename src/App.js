@@ -5,10 +5,11 @@ import ProtectedRoute from 'utils/ProtectedRoute';
 import { loginInputs, registerInputs } from 'formData';
 import {
   Dashboard,
-  Forgot,
+  ForgotPassword,
   Login,
   NotFound,
   Register,
+  ResetPassword,
   SharedLayout,
 } from 'pages';
 
@@ -47,7 +48,15 @@ function App() {
                 path='forgot'
                 element={
                   <ProtectedRoute>
-                    <Forgot />
+                    <ForgotPassword />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='reset-password/:token'
+                element={
+                  <ProtectedRoute>
+                    <ResetPassword />
                   </ProtectedRoute>
                 }
               />
