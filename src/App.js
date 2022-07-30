@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthRoute from 'utils/AuthRoute';
 import ProtectedRoute from 'utils/ProtectedRoute';
 import { loginInputs, registerInputs } from 'formData';
-import { Dashboard, Login, Register, SharedLayout } from 'pages';
+import { Dashboard, Login, NotFound, Register, SharedLayout } from 'pages';
 
 function App() {
   return (
@@ -36,6 +36,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route path='*' element={<NotFound />} />
             </Route>
           </Routes>
         </div>
