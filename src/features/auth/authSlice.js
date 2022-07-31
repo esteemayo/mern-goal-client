@@ -86,7 +86,7 @@ const authSlice = createSlice({
       state.isLoading = false;
       state.isSuccess = false;
       state.isError = false;
-      state.message = false;
+      state.message = '';
     },
     setLogout: (state) => {
       localStorage.removeItem(tokenKey);
@@ -133,6 +133,7 @@ const authSlice = createSlice({
     },
     [forgotPassword.rejected]: (state, { payload }) => {
       state.isLoading = false;
+      state.isSuccess = false;
       state.isError = true;
       state.message = payload.message;
     },
@@ -145,6 +146,7 @@ const authSlice = createSlice({
     },
     [resetPassword.rejected]: (state, { payload }) => {
       state.isLoading = false;
+      state.isSuccess = false;
       state.isError = true;
       state.message = payload.message;
     },
