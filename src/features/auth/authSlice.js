@@ -30,6 +30,32 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+export const forgotPassword = createAsyncThunk(
+  'auth/forgotPassword',
+  async ({ email, toast }, { rejectWithValue }) => {
+    try {
+      await authAPI.forgot({ email });
+      toast.success('Token Successfully Sent to Email');
+      return;
+    } catch (err) {
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
+export const resetPassword = createAsyncThunk(
+  'auth/resetPassword',
+  async ({ token, credentials, toast }, { rejectWithValue }) => {
+    try {
+      await authAPI.reset(token, credentials);
+      toast.success('Password Successfully Changed');
+      return;
+    } catch (err) {
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
 const token = authAPI.getJwt();
 const tokenKey = 'accessToken';
 const user = JSON.parse(localStorage.getItem(tokenKey));
@@ -97,6 +123,30 @@ const authSlice = createSlice({
       state.isError = true;
       state.message = payload.message;
       state.user = null;
+    },
+    [forgotPassword.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [forgotPassword.fulfilled]: (state) => {
+      state.isLoading = false;
+      state.isSuccess = true;
+    },
+    [forgotPassword.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isError = true;
+      state.message = payload.message;
+    },
+    [resetPassword.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [resetPassword.fulfilled]: (state) => {
+      state.isLoading = false;
+      state.isSuccess = true;
+    },
+    [resetPassword.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isError = true;
+      state.message = payload.message;
     },
   },
 });
