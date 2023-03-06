@@ -23,7 +23,7 @@ export const loginUser = createAsyncThunk(
     try {
       const { data } = await authAPI.login({ ...userData });
       toast.success('Login Successfully');
-      return data;
+      return data.details;
     } catch (err) {
       return rejectWithValue(err.response.data);
     }
