@@ -58,8 +58,7 @@ export const resetPassword = createAsyncThunk(
 );
 
 const token = authAPI.getJwt();
-const tokenKey = 'accessToken';
-const user = JSON.parse(localStorage.getItem(tokenKey));
+const user = getFromStorage(tokenKey);
 
 const initialState = {
   user: user ? user : null,
