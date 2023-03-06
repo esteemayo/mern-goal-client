@@ -12,4 +12,4 @@ export const forgot = (email) =>
 export const reset = (token, credentials) =>
   http.post(`${apiEndpoint}/reset-password/${token}`, credentials);
 
-export const getJwt = () => JSON.parse(localStorage.getItem(tokenKey))?.token;
+export const getJwt = () => getFromStorage(tokenKey)?.token;
