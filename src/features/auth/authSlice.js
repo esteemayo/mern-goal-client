@@ -61,7 +61,7 @@ const token = authAPI.getJwt();
 const user = getFromStorage(tokenKey);
 
 const initialState = {
-  user: user ? user : null,
+  user: user ?? null,
   isError: false,
   isSuccess: false,
   isLoading: false,
