@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import GoalForm from 'components/GoalForm';
+import Spinner from 'components/Spinner';
 import GoalItem from 'components/GoalItem';
 import { fetchGoals, reset } from 'features/goals/goalSlice';
 
