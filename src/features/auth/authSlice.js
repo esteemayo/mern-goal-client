@@ -115,7 +115,7 @@ const authSlice = createSlice({
     [loginUser.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
       state.isSuccess = true;
-      localStorage.setItem(tokenKey, JSON.stringify(payload));
+      setToStorage(tokenKey, payload);
       state.user = payload;
     },
     [loginUser.rejected]: (state, { payload }) => {
