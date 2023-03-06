@@ -1,3 +1,4 @@
+import { getFromStorage } from 'utils';
 import http from './httpService';
 
 const apiEndpoint = '/auth';
