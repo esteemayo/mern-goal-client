@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
-import Spinner from 'components/Spinner';
 import FormInput from 'components/FormInput';
 import FormButton from 'components/FormButton';
 import { loginUser, reset } from 'features/auth/authSlice';
