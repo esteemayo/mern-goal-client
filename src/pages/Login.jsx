@@ -37,7 +37,7 @@ const Login = ({ loginInputs }) => {
   useEffect(() => {
     isError && toast.error(message);
     isSuccess && user && navigate('/');
-    dispatch(reset());
+    return () => dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   if (isLoading) {
