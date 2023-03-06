@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import FormInput from 'components/FormInput';
-import FormButton from 'components/FormButton';
+import Spinner from 'components/Spinner';
 import { loginUser, reset } from 'features/auth/authSlice';
 
 const Login = ({ loginInputs }) => {
