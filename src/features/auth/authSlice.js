@@ -100,7 +100,7 @@ const authSlice = createSlice({
     [registerUser.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
       state.isSuccess = true;
-      localStorage.setItem(tokenKey, JSON.stringify(payload));
+      setToStorage(tokenKey, payload);
       state.user = payload;
     },
     [registerUser.rejected]: (state, { payload }) => {
