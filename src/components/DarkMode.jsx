@@ -1,6 +1,8 @@
 const DarkMode = () => {
   return (
-    <div className='container-darkmode'>DarkMode</div>
+    <div className='container-darkmode'>
+      <div className='wrapper'>dark</div>
+    </div>
   );
 };
 
