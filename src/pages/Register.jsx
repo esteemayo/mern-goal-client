@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getStorage,
