@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { FaSignInAlt } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Spinner from 'components/Spinner';
