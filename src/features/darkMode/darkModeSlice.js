@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { setToStorage } from 'utils';
+import { darkModeKey, setToStorage } from 'utils';
 
 const initialState = {
   darkMode: true,
