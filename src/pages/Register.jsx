@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import { FaUser } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
