@@ -11,8 +11,9 @@ import {
   getDownloadURL,
 } from 'firebase/storage';
 
+import app from '../firebase';
 import Spinner from 'components/Spinner';
-import FormInput from 'components/FormInput';
+import app from '../firebase';
 import FormButton from 'components/FormButton';
 import { registerUser, reset } from 'features/auth/authSlice';
 
