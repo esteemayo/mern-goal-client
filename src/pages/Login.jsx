@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import FormInput from 'components/FormInput';
 import Spinner from 'components/Spinner';
 import { loginUser, reset } from 'features/auth/authSlice';
+import FormButton from 'components/FormButton';
 
 const Login = ({ loginInputs }) => {
   const navigate = useNavigate();
