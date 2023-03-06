@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import * as authAPI from 'services/authService';
 import { register } from 'services/userService';
+import { getFromStorage } from 'utils';
 
 export const registerUser = createAsyncThunk(
   'user/register',
