@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { FaSignInAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
