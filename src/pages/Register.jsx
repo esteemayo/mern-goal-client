@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
