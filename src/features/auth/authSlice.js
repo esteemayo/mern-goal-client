@@ -5,7 +5,7 @@ import * as authAPI from 'services/authService';
 import { register } from 'services/userService';
 
 export const registerUser = createAsyncThunk(
-  'auth/register',
+  'user/register',
   async ({ userData, toast }, { rejectWithValue }) => {
     try {
       const { data } = await register({ ...userData });
