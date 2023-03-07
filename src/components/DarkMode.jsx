@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+
 const DarkMode = () => {
   return (
     <div className='container-darkmode'>
