@@ -1,3 +1,7 @@
+.app.dark {
+  background-color: #111;
+}
+
 .app.dark .container-darkmode {
   background-color: #131417;
   -webkit-box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
