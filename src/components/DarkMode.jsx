@@ -10,7 +10,9 @@ const DarkMode = () => {
 
   return (
     <div className='container-darkmode'>
-      <div className='wrapper' onClick={() => dispatch(toggle())}>dark</div>
+      <div className='wrapper' onClick={() => dispatch(toggle())}>
+        {darkMode ? <BiSun /> : <FaRegMoon />}
+      </div>
     </div>
   );
 };
