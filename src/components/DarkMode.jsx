@@ -1,3 +1,4 @@
+import { BiSun } from 'react-icons/bi';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaRegMoon } from 'react-icons/fa';
 
