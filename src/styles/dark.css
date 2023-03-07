@@ -8,3 +8,7 @@
 .app.dark .wrapper {
   background-color: #e4e4e8;
 }
+
+.app.dark .wrapper > * {
+  color: #39393c;
+}
