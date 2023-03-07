@@ -6,7 +6,7 @@ const DarkMode = () => {
 
   return (
     <div className='container-darkmode'>
-      <div className='wrapper'>dark</div>
+      <div className='wrapper' onClick={() => dispatch(toggle())}>dark</div>
     </div>
   );
 };
