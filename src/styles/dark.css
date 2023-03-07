@@ -16,7 +16,3 @@
 .app.dark .wrapper > * {
   color: #39393c;
 }
-
-.app.dark .container {
-  background-color: #111;
-}
