@@ -21,6 +21,7 @@
 }
 
 .app.dark .heading p {
+  color: rgb(94, 92, 92);
 }
 
 .app.dark .container-darkmode {
