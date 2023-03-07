@@ -2,6 +2,10 @@
   background-color: #111;
 }
 
+.app.dark a {
+  color: rgb(156, 156, 156);
+}
+
 .app.dark .header {
   border-color: rgb(66, 64, 64);
 }
