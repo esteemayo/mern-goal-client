@@ -34,7 +34,7 @@ const Dashboard = () => {
       <section className='content'>
         {goals.length > 0 ? (
           <div className='goals'>
-            {goals.map((item) => {
+            {goals?.map((item) => {
               return <GoalItem key={item._id} {...item} />;
             })}
           </div>
