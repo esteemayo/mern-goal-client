@@ -24,6 +24,11 @@
   color: rgb(94, 92, 92);
 }
 
+.app.dark .form-group input,
+.app.dark .form-group textarea,
+.app.dark .form-group select {
+}
+
 .app.dark .container-darkmode {
   background-color: #131417;
   -webkit-box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
