@@ -1,2 +1,3 @@
-.app.dark {
+.app.dark .container-darkmode {
+  background-color: #131417;
 }
