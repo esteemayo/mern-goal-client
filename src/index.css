@@ -246,6 +246,11 @@ h3 {
   transition: all 200ms ease-in;
 }
 
+.wrapper > * {
+  font-size: 14px;
+  color: #e4e4e8;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
