@@ -17,6 +17,7 @@
 }
 
 .app.dark .heading h1 {
+  color: rgb(156, 156, 156);
 }
 
 .app.dark .container-darkmode {
