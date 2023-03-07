@@ -10,6 +10,7 @@ const SharedLayout = () => {
     <>
       <Navbar />
       <ToastContainer />
+      <DarkMode />
       <Outlet />
     </>
   );
