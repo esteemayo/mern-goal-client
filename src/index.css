@@ -128,6 +128,7 @@ h3 {
 .form-group select {
   width: 100%;
   padding: 10px;
+  background-color: transparent;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   margin-bottom: 10px;
