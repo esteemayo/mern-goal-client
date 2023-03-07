@@ -217,6 +217,7 @@ h3 {
   bottom: 1%;
   width: 45px;
   height: 45px;
+  background-color: rgb(236, 236, 236);
 }
 
 @keyframes spin {
