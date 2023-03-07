@@ -12,6 +12,7 @@ import {
   ResetPassword,
   SharedLayout,
 } from 'pages';
+import { useSelector } from 'react-redux';
 
 function App() {
   return (
