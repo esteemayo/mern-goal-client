@@ -12,6 +12,7 @@
 
 .app.dark .btn {
   background-color: #202020;
+  border-color: #202020;
 }
 
 .app.dark .container-darkmode {
