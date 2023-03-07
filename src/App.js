@@ -18,7 +18,7 @@ function App() {
   const { darkMode } = useSelector((state) => ({ ...state.darkMode }));
 
   return (
-    <div className={darkMode && 'app dark'}>
+    <div className={darkMode ? 'app dark' : 'app'}>
       <Router>
         <div className='container'>
           <Routes>
