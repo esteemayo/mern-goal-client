@@ -3,6 +3,7 @@ import { toggle } from 'features/darkMode/darkModeSlice';
 
 const DarkMode = () => {
   const dispatch = useDispatch();
+  const { darkMode } = useSelector((state) => ({ ...state.darkMode }));
 
   return (
     <div className='container-darkmode'>
