@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { BiSun } from 'react-icons/bi';
 import { FaRegMoon } from 'react-icons/fa';
+
 import { toggle } from 'features/darkMode/darkModeSlice';
 
 const DarkMode = () => {
