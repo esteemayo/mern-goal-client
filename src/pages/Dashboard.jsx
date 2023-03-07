@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import GoalForm from 'components/GoalForm';
 import Spinner from 'components/Spinner';
 import { fetchGoals, reset } from 'features/goals/goalSlice';
+import GoalItem from 'components/GoalItem';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
