@@ -12,7 +12,6 @@ import {
   ResetPassword,
   SharedLayout,
 } from 'pages';
-import { useSelector } from 'react-redux';
 
 function App() {
   const { darkMode } = useSelector((state) => ({ ...state.darkMode }));
