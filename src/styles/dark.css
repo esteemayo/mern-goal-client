@@ -3,6 +3,7 @@
 }
 
 .app.dark .header {
+  border-color: rgb(66, 64, 64);
 }
 
 .app.dark .container-darkmode {
