@@ -11,6 +11,10 @@
   background-color: #e4e4e8;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: #39393c;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 *,
