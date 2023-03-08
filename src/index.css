@@ -7,6 +7,10 @@
   width: 0.7rem;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #e4e4e8;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 *,
