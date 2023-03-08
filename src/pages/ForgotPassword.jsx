@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
 import FormInput from 'components/FormInput';
-import FormButton from 'components/FormButton';
 import { forgotPassword, reset } from 'features/auth/authSlice';
 
 const ForgotPassword = () => {
