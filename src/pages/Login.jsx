@@ -80,7 +80,7 @@ const Login = ({ inputs }) => {
 };
 
 Login.propTypes = {
-  loginInputs: PropTypes.arrayOf(
+  inputs: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
