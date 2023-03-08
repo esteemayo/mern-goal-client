@@ -186,7 +186,7 @@ h3 {
 }
 
 .btn-reverse {
-  background-color: #fff;
+  background-color: var(--color-white);
   color: #000;
 }
 
