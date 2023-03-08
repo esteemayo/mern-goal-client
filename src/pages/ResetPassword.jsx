@@ -1,5 +1,5 @@
 import { FaUserCog } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
