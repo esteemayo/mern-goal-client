@@ -43,7 +43,7 @@ function App() {
                 path='register'
                 element={
                   <ProtectedRoute>
-                    <Register registerInputs={registerInputs} />
+                    <Register inputs={registerInputs} />
                   </ProtectedRoute>
                 }
               />
