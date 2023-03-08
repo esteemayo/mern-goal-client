@@ -51,6 +51,7 @@
 
 .app.dark .goal div,
 .app.dark .goal h2 {
+  color: rgb(117, 116, 116);
 }
 
 .app.dark .container-darkmode {
