@@ -36,6 +36,7 @@
 .app.dark .form-group textarea,
 .app.dark .form-group select {
   border-color: rgb(66, 64, 64);
+  caret-color: rgb(156, 156, 156);
 }
 
 .app.dark .form-group input:focus,
