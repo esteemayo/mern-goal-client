@@ -36,7 +36,7 @@ const ResetPassword = () => {
   useEffect(() => {
     isError && toast.error(message);
     isSuccess && navigate('/login');
-    dispatch(reset());
+    return () => dispatch(reset());
   }, [isError, isSuccess, message, navigate, dispatch]);
 
   return (
