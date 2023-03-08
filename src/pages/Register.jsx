@@ -24,7 +24,7 @@ const initialState = {
   confirmPassword: '',
 };
 
-const Register = ({ registerInputs }) => {
+const Register = ({ inputs }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isLoading, isError, isSuccess, message } = useSelector(
