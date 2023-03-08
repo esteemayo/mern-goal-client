@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 
 import FormInput from './FormInput';
 import { createNewGoal } from 'features/goals/goalSlice';
+import FormButton from './FormButton';
 
 const GoalForm = () => {
   const dispatch = useDispatch();
