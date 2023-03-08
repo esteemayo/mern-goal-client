@@ -35,7 +35,7 @@ function App() {
                 path='login'
                 element={
                   <ProtectedRoute>
-                    <Login loginInputs={loginInputs} />
+                    <Login inputs={loginInputs} />
                   </ProtectedRoute>
                 }
               />
