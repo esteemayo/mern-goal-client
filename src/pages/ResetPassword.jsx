@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import FormInput from 'components/FormInput';
-import FormButton from 'components/FormButton';
 import { reset, resetPassword } from 'features/auth/authSlice';
 
 const ResetPassword = () => {
