@@ -16,6 +16,9 @@
   border-color: #202020;
 }
 
+.app.dark .btn:hover {
+}
+
 .app.dark .btn:focus {
   outline-color: #555;
 }
