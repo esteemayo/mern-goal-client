@@ -15,6 +15,7 @@ import Spinner from 'components/Spinner';
 import app from '../firebase';
 import FormButton from 'components/FormButton';
 import { registerUser, reset } from 'features/auth/authSlice';
+import FormInput from 'components/FormInput';
 
 const initialState = {
   name: '',
