@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 import FormInput from 'components/FormInput';
 import { forgotPassword, reset } from 'features/auth/authSlice';
+import FormButton from 'components/FormButton';
 
 const ForgotPassword = () => {
   const dispatch = useDispatch();
