@@ -10,7 +10,7 @@ import Spinner from 'components/Spinner';
 import { loginUser, reset } from 'features/auth/authSlice';
 import FormButton from 'components/FormButton';
 
-const Login = ({ loginInputs }) => {
+const Login = ({ inputs }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isError, isSuccess, isLoading, message } = useSelector(
