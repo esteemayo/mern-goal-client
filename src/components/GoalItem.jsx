@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { FaTimesCircle } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 
 import { removeGoal } from 'features/goals/goalSlice';
 
