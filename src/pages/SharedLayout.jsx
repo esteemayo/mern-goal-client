@@ -9,7 +9,7 @@ const SharedLayout = () => {
   return (
     <>
       <Navbar />
-      <ToastContainer />
+      <ToastContainer style={{ fontSize: '14px' }} />
       <DarkMode />
       <Outlet />
     </>
