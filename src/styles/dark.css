@@ -28,6 +28,10 @@
   color: rgb(94, 92, 92);
 }
 
+.app.dark .form-group label {
+  color: rgb(156, 156, 156);
+}
+
 .app.dark .form-group input,
 .app.dark .form-group textarea,
 .app.dark .form-group select {
