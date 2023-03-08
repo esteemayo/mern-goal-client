@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { FaTimesCircle } from 'react-icons/fa';
