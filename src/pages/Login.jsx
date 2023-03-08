@@ -55,7 +55,7 @@ const Login = ({ inputs }) => {
 
       <section className='form'>
         <form onSubmit={handleSubmit}>
-          {loginInputs.map((input) => {
+          {inputs.map((input) => {
             const { id, type, name, placeholder } = input;
             return (
               <FormInput
