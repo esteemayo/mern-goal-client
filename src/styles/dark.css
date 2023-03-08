@@ -18,6 +18,7 @@
 
 .app.dark .btn:hover {
   background-color: #202020;
+  border-color: #1b1a1a;
 }
 
 .app.dark .btn:focus {
