@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import FormInput from 'components/FormInput';
 import { reset, resetPassword } from 'features/auth/authSlice';
+import FormButton from 'components/FormButton';
 
 const ResetPassword = () => {
   const { token } = useParams();
