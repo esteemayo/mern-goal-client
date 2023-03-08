@@ -16,6 +16,10 @@
   border-color: #202020;
 }
 
+.app.dark .btn:focus {
+  outline-color: #555;
+}
+
 .app.dark .heading h1 {
   color: rgb(156, 156, 156);
 }
