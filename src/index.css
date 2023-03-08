@@ -142,6 +142,12 @@ h3 {
   font-family: inherit;
 }
 
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: 1px solid #000;
+}
+
 .form-group label {
   text-align: left;
   display: block;
