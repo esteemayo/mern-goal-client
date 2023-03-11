@@ -93,6 +93,21 @@ const goalSlice = createSlice({
       state.isError = true;
       state.message = payload.message;
     },
+    [editGoal.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [editGoal.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isSuccess = true;
+      state.goals[
+        state.goals.findIndex((item) => item._id === payload._id)
+      ] = payload;
+    },
+    [editGoal.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isError = true;
+      state.message = payload.message;
+    },
     [removeGoal.pending]: (state) => {
       state.isLoading = true;
     },
