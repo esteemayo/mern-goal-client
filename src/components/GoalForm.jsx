@@ -9,7 +9,6 @@ import FormButton from './FormButton';
 const GoalForm = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState(null);
-  const [editID, setEditID] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
