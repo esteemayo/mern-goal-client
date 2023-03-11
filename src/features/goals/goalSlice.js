@@ -26,19 +26,6 @@ export const createNewGoal = createAsyncThunk(
   }
 );
 
-export const editGoal = createAsyncThunk(
-  'goals/update',
-  async ({ goalId, goal, toast }, { rejectWithValue }) => {
-    try {
-      const { data } = await goalAPI.updateGoal(goalId, goal);
-      toast.success('Goal Updated Successfully');
-      return data.goal;
-    } catch (err) {
-      return rejectWithValue(err.response.data);
-    }
-  }
-);
-
 export const removeGoal = createAsyncThunk(
   'goals/delete',
   async ({ id, toast }, { rejectWithValue }) => {
