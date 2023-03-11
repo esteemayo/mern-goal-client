@@ -10,6 +10,7 @@ const GoalForm = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState(null);
   const [editID, setEditID] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
